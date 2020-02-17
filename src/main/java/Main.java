@@ -83,9 +83,9 @@ public class Main {
                         int value = rgb & 0xFF;
 
                         SearchNode node = new SearchNode(nextX, nextY, value, rgb,  next);
-                        //if (value != 0) {
+                        if (value != 0) {
                             queue.add(node);
-                        //}
+                        }
                     }
                 }
             }
@@ -178,7 +178,7 @@ public class Main {
                 if (previous.value < value) {
                     int increment = (value - previous.value);
 
-                    elevation += Math.pow(Math.pow(increment,increment),increment);
+                    elevation += increment;//Math.pow(Math.pow(increment,increment),increment);
                     // all slope okay: increment
                     // avoid major slopes: Math.pow(increment,increment)
                     // avoid small slopes: Math.pow(Math.pow(increment,increment),increment)
