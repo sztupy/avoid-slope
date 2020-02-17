@@ -83,9 +83,9 @@ public class Main {
                         int value = rgb & 0xFF;
 
                         SearchNode node = new SearchNode(nextX, nextY, value, rgb,  next);
-                        if (value != 0) {
+                        //if (value != 0) {
                             queue.add(node);
-                        }
+                        //}
                     }
                 }
             }
